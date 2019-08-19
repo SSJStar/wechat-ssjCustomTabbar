@@ -76,7 +76,7 @@ tabbar: {
 ```
 6. 在app.js里加上tabarChange公共方法:
 
->此处的tabarChange方法在用到组件的页面js文件onLoad方法里调用，调用方法如下：
+>此处的tabarChange方法在用到组件的页面js文件onLoad方法里调用，调用方法如下：  
 onLoad: function (options) {
 var app = getApp()
 app.tabarChange()

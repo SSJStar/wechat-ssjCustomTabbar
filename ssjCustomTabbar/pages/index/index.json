@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ssjCustomTabbar": "../../components/ssjCustomTabbar/ssjCustomTabbar"
+  }
+}

@@ -1,0 +1,22 @@
+<!--components/ssjCustomTabbar.wxml-->
+<view class="tabbarBox">
+
+  <block wx:for="{{tabarData.list}}" wx:key="key">
+    <!-- 非正常显示 -->
+    <navigator url="{{item.pagePath}}" wx:if="{{item.special}}" hover-class="none" open-type="navigate">
+      <view class="barView">
+        <image class="spectial-barView-image" src="{{item.iconPath}}"></image>
+        <!-- 空src的image作用是占位，让底部文字对其 -->
+        <image class="barView-image" src=""></image>
+        <text>{{item.text}}</text>
+      </view>
+    </navigator>
+    <!-- 正常显示 -->
+    <navigator url="{{item.pagePath}}" wx:else hover-class="none" open-type="switchTab">
+      <view class="barView">
+        <image class="barView-image" src="{{item.selected?item.selectedIconPath:item.iconPath}}"></image>
+        <text>{{item.text}}</text>
+      </view>
+    </navigator>
+  </block>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/main/mainPage.wxml-->
+<text>首页</text>
+
+
+
+<navigator class="page-foot" url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">
+    11111
+  </navigator>
+<ssjCustomTabbar tabarData="{{tabbarData}}"></ssjCustomTabbar>

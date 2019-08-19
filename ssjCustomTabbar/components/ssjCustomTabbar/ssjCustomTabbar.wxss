@@ -1,0 +1,42 @@
+/* components/ssjCustomTabbar.wxss */
+.tabbarBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 98rpx;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.barView{
+  /* background-color: pink; */
+  height: 100rpx;
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  /* 垂直线上居中 */
+  justify-content: center;
+  /* 水平线上居中 */
+  align-items: center;
+  text-align: center;
+}
+
+.barView-image{
+  width: 56rpx;
+  height: 56rpx;
+}
+.barView text{
+  font-size: 22.0rpx;
+}
+
+
+.spectial-barView-image{
+  width: 90rpx;
+  height: 90rpx;
+  top: -35rpx;
+  position: absolute;
+}

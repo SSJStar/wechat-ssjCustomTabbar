@@ -13,7 +13,7 @@
 ```
 {
 "usingComponents": {
-"ssjCustomTabbar": "../../components/ssjCustomTabbar"
+"ssjCustomTabbar": "../../components/ssjCustomTabbar/ssjCustomTabbar"
 },
 }
 ```
@@ -51,26 +51,26 @@
 ```
 this.globalData = {
 tabbar: {
-"list": [{
-"pagePath": "/pages/mainPage/mainPage",
-"text": "首页",
-"iconPath": "../icon/icon_home.png",
-"selectedIconPath": "../icon/icon_home_HL.png"
-},
-{
-"pagePath": "/pages/add/addPage",
-"text": "新增",
-"special": true,
-"iconPath": "../icon/icon_release.png"
-},
-{
-"pagePath": "/pages/index/index",
-"text": "日志",
-"iconPath": "../icon/icon_mine.png",
-"selectedIconPath": "../icon/icon_mine_HL.png"
-}
-]
-}
+      "list": [{
+          "pagePath": "/pages/mainPage/mainPage",
+          "text": "首页",
+          "iconPath": "../../icon/icon_home.png",
+          "selectedIconPath": "../../icon/icon_home_HL.png"
+        },
+        {
+          "pagePath": "/pages/add/addPage",
+          "text": "新增",
+          "special":true,
+          "iconPath": "../../icon/icon_release.png"
+        },
+        {
+          "pagePath": "/pages/index/index",
+          "text": "日志",
+          "iconPath": "../../icon/icon_mine.png",
+          "selectedIconPath": "../../icon/icon_mine_HL.png"
+        }
+      ]
+    }
 
 }
 ```

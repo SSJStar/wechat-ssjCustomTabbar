@@ -105,5 +105,10 @@ tabbarData: tabbarData
 })
 }
 ```
+7. 在app.js里的onLaunch方法加上这句代码:
+```
+//隐藏系统tabbar
+wx.hideTabBar()
+```
 参考文章：https://www.jianshu.com/p/b19d7d0cb582
 完毕！O(∩_∩)O~~

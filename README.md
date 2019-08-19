@@ -74,5 +74,36 @@ tabbar: {
 
 }
 ```
+6. 在app.js里加上tabarChange公共方法:
+
+>此处的tabarChange方法在用到组件的页面js文件onLoad方法里调用，调用方法如下：
+onLoad: function (options) {
+var app = getApp()
+app.tabarChange()
+},
+```
+tabarChange: function() {
+var tabbarData = this.globalData.tabbar
+//每个页面初始化的时候 都可以调用这个方法，目的是为了初始化页面的tabbar的配置数据
+//获得当前页
+var pages = getCurrentPages()
+let currentPage = pages[pages.length - 1]
+//先将所有tabbar状态设置为未选中，然后当前页的状态设置为被选中
+for (let index in tabbarData.list) {
+var child = tabbarData.list[index]
+child.selected = false
+//因为currentPage.route默认pages前面少了一个'/'所以
+var comparePath = currentPage.route
+comparePath.indexOf('/') != 0 && (comparePath = '/' + comparePath)
+if (child.pagePath == comparePath) {
+child.selected = true
+}
+}
+//将globalData的tabbar配置传入当前页面
+currentPage.setData({
+tabbarData: tabbarData
+})
+}
+```
 参考文章：https://www.jianshu.com/p/b19d7d0cb582
 完毕！O(∩_∩)O~~
